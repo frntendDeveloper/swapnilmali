@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Email Distribution List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/pop.css">
+    <link href="css/css.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-section col-md-12">
+                        <div class="row">
+                            <div class="logo col-sm-3">
+                                <a href="dashboard.html"> <span id="logo"><img src="images/logo.svg" height="60px"></span></a>
+                            </div>
+                            <div class="col-md-9 col-sm-9">
+                                <div class="top_menu">
+                                    <div class="notification">
+                                        <ul class="notification-dropdown">
+                                            <li class="dropdown note"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                    aria-expanded="false"><i class="fa fa-bell-o"></i> <span class="badge">2</span></a>
+                                                <ul class="dropdown-menu two">
+                                                    <li>
+                                                        <div class="notification_header">
+                                                            <h3>You have 2 new notification</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown note"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <div class="profile">
+                                                        <img src="images/profile-picture.png" height="28px" width="28px">
+                                                    </div>
+                                                </a>
+                                                <ul class="dropdown-menu one">
+                                                    <li>
+                                                        <div class="notification_header">
+                                                            <h3><img src="images/Log-out.svg"> Log Out</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <div class="clearfix"></div>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 cotent">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="sidebar-menu">
+                        <div id="myBtnContainer">
+                            <ul id="menu">
+                                <li class="link"><a href="dashboard.html"><img src="images/dashboard.svg" class="icon">
+                                        <span>Dashboard</span></a></li>
+                                <li class="link"><a href="clause-tiles.html"><img src="images/clause-tiles.svg" class="icon"><span>Clause
+                                            Tiles</span></a></li>
+                                <li class="link"><a href="image-library.html"><img src="images/watermark.svg" class="icon"><span>Image
+                                            Library</span></a></li>
+                                <li class="link"><a href="templates.html"><img src="images/templates.svg" class="icon"><span>Templates</span></a></li>
+                                <li class="link" id="menu-academico"><a href="questionnaires.html"><img src="images/questionaries.svg"
+                                            class="icon"><span>Questionaries</span></a></li>
+                                <li class="link"><a href="lawyer.html"><img src="images/lawyer.svg" class="icon"><span>Lawyer</span></a>
+                                <li class="link active"><a href="email-distribution-list.html"><img src="images/user-magmnt.svg"
+                                            class="icon"><span>Distribution List</span></a>
+                                <li class="link"><a href="user-management.html"><img src="images/management.svg" class="icon"><span>User
+                                            Management</span></a>
+
+                            </ul>
+                        </div>
+
+                        <div class="johncrana">
+                            <img src="images/john-crana.png">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="topsection">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="Clause-Tiles">
+                                    <h1>Email Distribution List</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5">
+                                <div class="search-nav-item">
+                                    <div class="input-group">
+                                        <input id="searchModalDesktop" type="text" class="ptc-header-search"
+                                            placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <a href="#">
+                                                <img src="images/search.svg" class="search">
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="poup">
+                                    <button type="button" class="btn btn-info btn-lg" onclick="document.getElementById('editright').style.display='block'">Add
+                                        New</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomsection">
+                        <div class="row row-flex">
+                            <div id="list_names">
+                                <ul>
+                                    <li class="swa active" onclick="filterSelection('all')">
+                                        <div class="list_option">
+                                            <p>All_Accounts</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('Marketing')">
+                                        <div class="list_option">
+                                            <p>Marketing</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('hr')">
+                                        <div class="list_option">
+                                            <p>HR</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('Sales')">
+                                        <div class="list_option">
+                                            <p>Sales</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('Products')">
+                                        <div class="list_option">
+                                            <p>Products</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('All_Lawyers')">
+                                        <div class="list_option">
+                                            <p>All_Lawyers</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swa" onclick="filterSelection('Admin')">
+                                        <div class="list_option">
+                                            <p>Admin</p>
+                                        </div>
+                                        <div class="right_option">
+                                            <div class="grup">
+                                                <a href="#"><img src="images/edit.svg" class="option" onclick="document.getElementById('editright').style.display='block'"></a>
+                                                <a href="#"><img src="images/group.svg" class="option" onclick="document.getElementById('deleteleft').style.display='block'"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                    <div class="pills">
+                        <div class="title">
+                            <div class="clause">
+                                <h1>EMAIL LIST</h1>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="rightside">
+                            <ul class="nav">
+                                <li class="rightemail">
+                                    <div class="sort Marketing">
+                                        <div class="name">
+                                            <p>John@gmail.com</p>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="rightemail">
+                                    <div class="sort hr">
+                                        <div class="name">
+                                            <p>samuel@gmail.com</p>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="rightemail">
+                                    <div class="sort Sales">
+                                        <div class="name">
+                                            <p>percy@gmail.com</p>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="rightemail">
+                                    <div class="sort Products">
+                                        <div class="name">
+                                            <p>Arthur@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="rightemail">
+                                    <div class="sort Admin">
+                                        <div class="name">
+                                            <p>kye@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="rightemail">
+                                    <div class="sort All_Lawyers">
+                                        <div class="name">
+                                            <p>jacob@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="delete-left">
+        <div id="deleteleft" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <div class="md-content">
+                    <div>
+                        <div class="modal-body">
+                            <p>Do you want to delete Left</p>
+                        </div>
+                        <div class="delete-footer">
+                            <button type="button" class="btn btn-default" onclick="document.getElementById('deleteleft').style.display='none'">Cancel</button>
+                            <div class="cancel">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="delete-right">
+        <div id="deleteright" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <div class="md-content">
+                    <div>
+                        <div class="modal-body">
+                            <p>Do you want to delete Right</p>
+                        </div>
+                        <div class="delete-footer">
+                            <button type="button" class="btn btn-default" onclick="document.getElementById('deleteright').style.display='none'">Cancel</button>
+                            <div class="cancel">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="edit-right">
+        <div id="editright" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <div class="md-content">
+                    <div>
+                        <div class="content">
+                            <div class="question-title">
+                                <p>ADD NEW EMAIL DISTRIBUTION LIST</p><br>
+                                <input type="text" name="firstname" placeholder="Enter List Name"><br><br>
+                               <div class="distribution">
+                                    <P>Distribution List</P> <button type="button" class="btn btn-default" data-dismiss="modal">ADD</button>
+                               </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr class="table-heading">
+                                            <th scope="col">EMAIL</th>
+                                            <th scope="col">FIRST NAME</th>
+                                            <th scope="col">LAST NAME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+                                        <tr>
+
+                                            <th>joannak@smiths.com</td>
+                                            <th>Joanna</th>
+                                            <th>Kelper</th>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="document.getElementById('editright').style.display='none'">Cancel</button>
+                            <div class="cancel">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                            </div>
+                        </div>
+                        <!-- <button class="md-close">Close me!</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("sort");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        var header = document.getElementById("menu");
+        var btns = header.getElementsByClassName("link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+    </script>
+
+
+    <script>
+
+        var list = document.getElementById("list_names");
+        var btn = list.getElementsByClassName("swa");
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[1].className = current[1].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

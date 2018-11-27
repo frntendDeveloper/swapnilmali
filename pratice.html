@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		
+	},
+	data: [{
+		type: "pie",
+		startAngle: 40,
+		yValueFormatString: "##0.00\"%\"",
+		dataPoints: [
+			{y: 79.45, label: ""},
+			{y: 45.31, label: ""},
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="canvasjs.min.js"></script>
+</body>
+</html>
